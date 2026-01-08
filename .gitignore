@@ -1,0 +1,13 @@
+# Android/Gradle
+.gradle/
+.gradle-dist/
+/.idea/
+/local.properties
+/.jdks/
+/.jdk/
+*.hprof
+/build/
+/app/build/
+/captures/
+*.iml
+.DS_Store

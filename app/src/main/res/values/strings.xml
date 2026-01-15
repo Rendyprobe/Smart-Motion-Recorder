@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GathiLekha</string>
+    <string name="app_name">Smart Motion Recorder</string>
     <string name="notification_channel_name">Monitoring</string>
     <string name="notification_channel_desc">Motion monitoring foreground service</string>
     <string name="notification_stop">Stop</string>

@@ -4,7 +4,11 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature android:name="android.hardware.camera.any" android:required="true" />
 
@@ -17,10 +21,10 @@
         android:theme="@style/Theme.MotionRecorder">
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713" />
+            android:value="ca-app-pub-1053766309291403~6906519153" />
 
         <activity
-            android:name="com.gathilekha.motionrecorder.ui.MainActivity"
+            android:name="com.smartmotionrecorder.ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,9 +43,14 @@
         </provider>
 
         <service
-            android:name="com.gathilekha.motionrecorder.service.BackgroundMonitorService"
+            android:name="com.smartmotionrecorder.service.BackgroundMonitorService"
             android:exported="false"
             android:foregroundServiceType="camera|microphone" />
+
+        <service
+            android:name="com.smartmotionrecorder.service.RemoteControlService"
+            android:exported="false"
+            android:foregroundServiceType="camera|dataSync" />
 
     </application>
 
